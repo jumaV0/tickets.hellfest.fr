@@ -15,4 +15,3 @@ services:
     rootDir: artifacts/hellfest-revente
     buildCommand: npm install -g pnpm && pnpm install && pnpm build
     staticPublishPath: dist
-    
