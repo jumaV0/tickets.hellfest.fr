@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: api-server
+    env: node
+    rootDir: artifacts/api-server
+    buildCommand: npm install -g pnpm && pnpm install && pnpm build
+    startCommand: node build.mjs
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+  - type: static
+    name: hellfest-frontend
+    env: static
+    rootDir: artifacts/hellfest-revente
+    buildCommand: npm install -g pnpm && pnpm install && pnpm build
+    staticPublishPath: dist
+    
