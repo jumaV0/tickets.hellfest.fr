@@ -9,7 +9,7 @@ services:
       - key: NODE_ENV
         value: production
 
-  - type: static
+  - type: web
     name: hellfest-frontend
     env: static
     rootDir: artifacts/hellfest-revente
